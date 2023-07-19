@@ -1,0 +1,19 @@
+{
+  "name": "react-from-scratch",
+  "description": "A project with pure react, configured without CRA",
+  "author": "Seungrok Yoon",
+  "repository": "https://github.com/SeungrokYoon/react-from-scratch",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "start": "",
+    "build": ""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
+  }
+}
