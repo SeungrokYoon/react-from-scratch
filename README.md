@@ -2,6 +2,10 @@
 
 This repository is aimed at exploring various methodologies and practical usage of React, whilst ceaselessly searching for better ways to construct sustainable and scalable react-components.
 
+If you are moire interested in the history of my project,
+
+please visit my blog post [here](https://velog.io/@seungrok-yoon/React-18-CRA-%EC%97%86%EC%9D%B4-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
+
 React version: react@18.2.0
 
 ## Configuration History
