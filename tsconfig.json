@@ -6,7 +6,10 @@
     "jsx": "react-jsx",
     "module": "ES6",
     "target": "ES5",
+    "allowJs": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
     "paths": {
       "@Page/*": ["./pages/*"],
       "@Component/*": ["./components/*"]

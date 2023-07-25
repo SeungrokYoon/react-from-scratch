@@ -11,7 +11,8 @@ const stylesHandler = isProduction
   : 'style-loader';
 
 const config = {
-  entry: './src/index.jsx',
+  mode: 'development',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'code.bundle.js',
@@ -43,6 +44,11 @@ const config = {
         ],
       },
       {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/i,
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
@@ -56,7 +62,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.ts', '.tsx'],
     alias: {
       '@Page': path.resolve(__dirname, './src/pages'),
       '@Component': path.resolve(__dirname, './src/components'),

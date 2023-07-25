@@ -6,7 +6,15 @@
   },
   "extends": ["eslint:recommended", "airbnb", "airbnb/hooks", "prettier"],
   "rules": {
-    "react/react-in-jsx-scope": "off" //^React17, this is not mandatory
+    "react/react-in-jsx-scope": "off", //^React17, this is not mandatory
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
