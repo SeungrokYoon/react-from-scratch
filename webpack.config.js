@@ -11,6 +11,7 @@ const stylesHandler = isProduction
   : 'style-loader';
 
 const config = {
+  mode: 'development',
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -31,7 +32,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts|tsx)$/i,
+        test: /\.(js|jsx)$/i,
         exclude: /node_modules/,
         use: [
           {
@@ -41,6 +42,11 @@ const config = {
             },
           },
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
@@ -56,7 +62,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.ts', '.tsx'],
     alias: {
       '@Page': path.resolve(__dirname, './src/pages'),
       '@Component': path.resolve(__dirname, './src/components'),
