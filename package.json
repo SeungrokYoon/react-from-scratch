@@ -18,9 +18,12 @@
     "port": 8080
   },
   "dependencies": {
+    "@types/node": "^20.4.4",
+    "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.2"
+    "react-router-dom": "^6.14.2",
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

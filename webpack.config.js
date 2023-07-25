@@ -11,7 +11,7 @@ const stylesHandler = isProduction
   : 'style-loader';
 
 const config = {
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'code.bundle.js',
@@ -31,7 +31,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/i,
+        test: /\.(js|jsx|ts|tsx)$/i,
         exclude: /node_modules/,
         use: [
           {
@@ -56,7 +56,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@Page': path.resolve(__dirname, './src/pages'),
       '@Component': path.resolve(__dirname, './src/components'),
