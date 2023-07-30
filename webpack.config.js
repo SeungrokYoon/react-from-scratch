@@ -19,6 +19,7 @@ const config = {
   },
   devServer: {
     open: true,
+    historyApiFallback: true,
     host: 'localhost',
   },
   plugins: [
