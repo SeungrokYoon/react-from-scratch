@@ -67,6 +67,7 @@ const config = {
     alias: {
       '@Page': path.resolve(__dirname, './src/pages'),
       '@Component': path.resolve(__dirname, './src/components'),
+      '@Hook': path.resolve(__dirname, './src/hooks'),
     },
   },
 };
