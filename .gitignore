@@ -1,2 +1,8 @@
+# node_modules
 node_modules
+
+# api keys
 apiKey.js
+
+# dist folder for built files
+dist

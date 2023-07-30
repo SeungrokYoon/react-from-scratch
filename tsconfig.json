@@ -2,6 +2,7 @@
   "compilerOptions": {
     "strict": false,
     "baseUrl": "src",
+    "outDir": "./dist",
     "checkJs": true,
     "jsx": "react-jsx",
     "module": "ES6",
