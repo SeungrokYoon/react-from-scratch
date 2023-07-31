@@ -8,9 +8,10 @@ export default function Home() {
         <Link to="/about">About Page</Link>
       </div>
       <div>
-        <a href="/" target="">
-          Home
-        </a>
+        <Link to="/sign-up">Sign Up</Link>
+      </div>
+      <div>
+        <Link to="/sign-in">Sign In</Link>
       </div>
     </main>
   );
