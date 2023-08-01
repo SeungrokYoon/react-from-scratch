@@ -1,5 +1,13 @@
-import './pagelayout.css';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export default function PageLayout({ children }) {
-  return <main className="page-layout">{children}</main>;
+  return <Main>{children}</Main>;
 }
+
+const Main = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;

@@ -18,6 +18,9 @@
     "port": 8080
   },
   "dependencies": {
+    "@emotion/eslint-plugin": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "firebase": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,6 +30,7 @@
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
+    "@emotion/babel-plugin": "^11.11.0",
     "@types/node": "^20.4.4",
     "@types/react-dom": "^18.2.7",
     "@types/webpack": "^5.28.1",

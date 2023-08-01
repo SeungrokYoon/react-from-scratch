@@ -5,6 +5,7 @@
     "outDir": "./dist",
     "checkJs": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "module": "ES6",
     "target": "ES5",
     "allowJs": true,
