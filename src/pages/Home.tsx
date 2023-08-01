@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import style from './home.module.css';
 
 export default function Home() {
   return (
-    <main>
+    <main className={style.main}>
       <section>This is Home Page</section>
       <div>
         <Link to="/about">About Page</Link>
