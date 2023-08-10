@@ -1,6 +1,6 @@
-import { HTMLAttributes, MutableRefObject, forwardRef } from 'react';
+import { InputHTMLAttributes, MutableRefObject, forwardRef } from 'react';
 
-interface InputBaseComponentProps extends HTMLAttributes<HTMLInputElement> {}
+type InputBaseComponentProps = InputHTMLAttributes<HTMLInputElement>;
 
 /**
  *
