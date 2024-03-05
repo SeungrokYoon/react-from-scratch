@@ -52,12 +52,44 @@ export default function SignUp() {
                   alert(errorCode + errorMessage);
                 });
             }}
-          >
-            submit
-          </button>
+          />
+        </label>
+        <label>
+          password
+          <input
+            type="password"
+            value={formData.password}
+            onChange={(e) => {
+              setFormData.setPassword(e.target.value);
+            }}
+          />
+        </label>
+        <button
+          type="submit"
+          onClick={(e) => {
+            e.preventDefault();
+            const auth = getAuth();
+            createUserWithEmailAndPassword(
+              auth,
+              formData.email,
+              formData.password
+            )
+              .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                // ...
+                alert('회원가입이 완료되었습니다');
+              })
+              .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorCode + errorMessage);
+              });
+          }}
+        >
+          submit
+        </button>
         </form>
-      </div>
-      <div>
         <Form />
       </div>
     </PageLayout>
