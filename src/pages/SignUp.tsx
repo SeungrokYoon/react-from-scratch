@@ -1,6 +1,7 @@
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import useForm from '@Hook/useForm';
 import PageLayout from '@Page/PageLayout';
+import Form from '@Component/Form';
 
 export default function SignUp() {
   const { formData, setFormData } = useForm();
@@ -54,6 +55,7 @@ export default function SignUp() {
           submit
         </button>
       </form>
+      <Form />
     </PageLayout>
   );
 }
