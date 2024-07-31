@@ -1,55 +1,12 @@
-import { useEffect, useState } from 'react';
-
-interface User {
-  id: string;
-  name: string;
-}
+import useUsers from '@Hook/useUsers';
+import { useState } from 'react';
 
 export default function UserManagement() {
-  const [users, setUsers] = useState<User[]>([]);
-  const [newUserName, setNewUserName] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  const fetchUsers = () => {
-    setIsLoading(true);
-    setError(null);
-
-    fetch('https://dummyjson.com/users')
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        setError('Failed to fetch users');
-        setIsLoading(false);
-      });
-  };
-
-  const handleAddUser = () => {
-    if (newUserName.trim()) {
-      const newUser = { id: Date.now(), name: newUserName };
-      fetch('https://dummyjson.com/users/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newUser),
-      });
-      setNewUserName('');
-    }
-  };
-
-  const handleDeleteUser = (userId: string) => {
-    setUsers(users.filter((user) => user.id !== userId));
-
-    fetch(`https://dummyjson.com/users/${userId}`, {
-      method: 'DELETE',
-    });
-  };
+  const { users, isLoading, error, addUser, deleteUser } = useUsers();
+  const [newUserName, setNewUserName] = useState({
+    firstName: '',
+    lastName: '',
+  });
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
@@ -60,18 +17,37 @@ export default function UserManagement() {
         type="text"
         name=""
         id=""
-        value={newUserName}
+        value={newUserName.firstName}
         onChange={(e) => {
-          setNewUserName(e.target.value);
+          setNewUserName((prev) => ({ ...prev, firstName: e.target.value }));
         }}
-        placeholder="Enter new user name"
+        placeholder="Enter first name"
       />
-      <button onClick={handleAddUser}>Add User</button>
+      <input
+        type="text"
+        name=""
+        id=""
+        value={newUserName.lastName}
+        onChange={(e) => {
+          setNewUserName((prev) => ({ ...prev, lastName: e.target.value }));
+        }}
+        placeholder="Enter last name"
+      />
+      <button
+        onClick={() => {
+          addUser(newUserName);
+          setNewUserName({ firstName: '', lastName: '' });
+        }}
+      >
+        Add User
+      </button>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
-            {user.name}
-            <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+            <span>
+              {user.firstName}&nbsp;{user.lastName}
+            </span>
+            <button onClick={() => deleteUser(user.id)}>Delete</button>
           </li>
         ))}
       </ul>

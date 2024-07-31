@@ -5,6 +5,7 @@ import About from '@Page/About';
 import Info from '@Page/Info';
 import SignUp from '@Page/SignUp';
 import SignIn from '@Page/SignIn';
+import User from '@Page/User';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
   { path: 'info', element: <Info /> },
   { path: 'sign-up', element: <SignUp /> },
   { path: 'sign-in', element: <SignIn /> },
+  { path: 'user', element: <User /> },
 ]);
 
 export default function App() {
