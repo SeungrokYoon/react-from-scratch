@@ -6,6 +6,7 @@ import Info from '@Page/Info';
 import SignUp from '@Page/SignUp';
 import SignIn from '@Page/SignIn';
 import User from '@Page/User';
+import NestedCustomHook from '@Page/NestedCustomHook';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   { path: 'sign-up', element: <SignUp /> },
   { path: 'sign-in', element: <SignIn /> },
   { path: 'user', element: <User /> },
+  { path: 'nested-hooks', element: <NestedCustomHook /> },
 ]);
 
 export default function App() {

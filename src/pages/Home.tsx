@@ -17,6 +17,9 @@ export default function Home() {
       <div>
         <Link to="/user">User</Link>
       </div>
+      <div>
+        <Link to="/nested-hooks">Nested Hook Test</Link>
+      </div>
     </Main>
   );
 }
