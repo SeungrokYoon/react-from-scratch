@@ -15,7 +15,6 @@ export default function useNestedHook(): {
   formValues: FormValues;
   setter: Setter;
 } {
-  console.log('useNestedHook Rerender');
   const { name, setName } = useName();
   const { email, setEmail } = useEmail();
 

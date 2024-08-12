@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import useNestedHook from '@Hook/nested-custom-hook/useNestedHook';
+import { memo } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function NestedCustomHook() {
@@ -35,12 +36,23 @@ export default function NestedCustomHook() {
         </label>
       </form>
       <HorizontalFlexContainer gap="20px">
-        <CustomSpan>Name: {formValues.name}</CustomSpan>
-        <CustomSpan>Email: {formValues.email}</CustomSpan>
+        <MemoizedSpan label="Name" data={formValues.name} />
+        <MemoizedSpan label="email" data={formValues.email} />
       </HorizontalFlexContainer>
     </VerticalFlexContainer>
   );
 }
+
+const MemoizedSpan = memo(
+  ({ label, data }: { label: string; data: string }) => {
+    console.log('MemoizedSpan', label, data);
+    return (
+      <CustomSpan>
+        {label}: {data}
+      </CustomSpan>
+    );
+  }
+);
 
 const HorizontalFlexContainer = styled.div<{ gap: string }>`
   display: flex;
