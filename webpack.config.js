@@ -20,7 +20,8 @@ const config = {
   devServer: {
     open: true,
     historyApiFallback: true,
-    host: 'localhost',
+    host: '0.0.0.0', // Bind to all interfaces
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
