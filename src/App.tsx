@@ -6,6 +6,7 @@ import Info from '@Page/Info';
 import SignUp from '@Page/SignUp';
 import SignIn from '@Page/SignIn';
 import User from '@Page/User';
+import SidebarPage from '@Page/Sidebar';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   { path: 'sign-up', element: <SignUp /> },
   { path: 'sign-in', element: <SignIn /> },
   { path: 'user', element: <User /> },
+  { path: 'sidebar', element: <SidebarPage /> },
 ]);
 
 export default function App() {
