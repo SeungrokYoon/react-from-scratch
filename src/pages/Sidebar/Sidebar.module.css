@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   margin: 0;
   background-color: #073e77;
   background-size: cover;
@@ -12,7 +12,7 @@ body {
   font-family: 'Euclid Circular A';
 }
 
-button,
+.transparent_button button,
 label {
   background: transparent;
   border: 0;

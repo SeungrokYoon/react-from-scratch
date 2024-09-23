@@ -1,9 +1,9 @@
-import './Sidebar.module.css';
+import style from './Sidebar.module.css';
 
 export default function SidebarPage() {
   return (
-    <body>
-      <aside className="sidebar">
+    <body className={style.body}>
+      <aside className={style.sidebar}>
         <header>
           <img src="/sidebar/logo.svg" alt="sidebar-logo" />
         </header>
@@ -19,13 +19,15 @@ export default function SidebarPage() {
             <input type="radio" name="sidebar" id="settings" />
             <label htmlFor="settings">
               <i className="ai-gear"></i>
-              <p>Dashboard</p>
+              <p>Settings</p>
               <i className="ai-chevron-down-small"></i>
             </label>
             <div className="submenu">
               <ul>
                 <li>
-                  <button type="button">Display</button>
+                  <button type="button" className={style.transparent_button}>
+                    Display
+                  </button>
                 </li>
                 <li>
                   <button type="button">Appearance</button>
