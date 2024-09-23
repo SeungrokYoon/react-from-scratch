@@ -73,6 +73,9 @@ export default function Home() {
       <div>
         <Link to="/user">User</Link>
       </div>
+      <div>
+        <Link to="/sidebar">Sidebar</Link>
+      </div>
       <FlexCol>
         <label htmlFor="aNum">
           aNum
