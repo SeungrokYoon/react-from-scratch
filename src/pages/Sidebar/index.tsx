@@ -1,3 +1,5 @@
+import './Sidebar.module.css';
+
 export default function SidebarPage() {
   return (
     <body>
