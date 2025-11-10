@@ -45,6 +45,7 @@ const RAW_RUNTIME_STATE =
           ["@webpack-cli/generators", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:3.0.7"],\
           ["autoprefixer", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:10.4.21"],\
           ["babel-loader", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:9.2.1"],\
+          ["copy-webpack-plugin", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:13.0.1"],\
           ["css-loader", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:6.11.0"],\
           ["eslint", "npm:8.57.1"],\
           ["eslint-config-airbnb", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:19.0.4"],\
@@ -7041,6 +7042,33 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["copy-webpack-plugin", [\
+      ["npm:13.0.1", {\
+        "packageLocation": "./.yarn/cache/copy-webpack-plugin-npm-13.0.1-1c6a7d964e-14299770d2.zip/node_modules/copy-webpack-plugin/",\
+        "packageDependencies": [\
+          ["copy-webpack-plugin", "npm:13.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:13.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/copy-webpack-plugin-virtual-4c3938921a/0/cache/copy-webpack-plugin-npm-13.0.1-1c6a7d964e-14299770d2.zip/node_modules/copy-webpack-plugin/",\
+        "packageDependencies": [\
+          ["@types/webpack", "npm:5.28.5"],\
+          ["copy-webpack-plugin", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:13.0.1"],\
+          ["glob-parent", "npm:6.0.2"],\
+          ["normalize-path", "npm:3.0.0"],\
+          ["schema-utils", "npm:4.3.3"],\
+          ["serialize-javascript", "npm:6.0.2"],\
+          ["tinyglobby", "npm:0.2.15"],\
+          ["webpack", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:5.102.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/webpack",\
+          "webpack"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["core-js-compat", [\
       ["npm:3.46.0", {\
         "packageLocation": "./.yarn/cache/core-js-compat-npm-3.46.0-10e5a8fd87-d50f8870e1.zip/node_modules/core-js-compat/",\
@@ -11460,6 +11488,7 @@ const RAW_RUNTIME_STATE =
           ["@webpack-cli/generators", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:3.0.7"],\
           ["autoprefixer", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:10.4.21"],\
           ["babel-loader", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:9.2.1"],\
+          ["copy-webpack-plugin", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:13.0.1"],\
           ["css-loader", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:6.11.0"],\
           ["eslint", "npm:8.57.1"],\
           ["eslint-config-airbnb", "virtual:6c96e30dc4e1d28dab07619396ff888db936a8888c0206244e9847814111e788eb5d1eb70b50be94e5c149d1c8379a24b292c2aa8dd13ec0f62d08d5ea019e54#npm:19.0.4"],\
@@ -18883,40 +18912,28 @@ class FileHandle {
   sync() {
     throw new Error(`Method not implemented.`);
   }
-  async read(bufferOrOptions, offsetOrOptions, length, position) {
+  async read(bufferOrOptions, offset, length, position) {
     try {
       this[kRef](this.read);
       let buffer;
-      let offset;
-      if (!ArrayBuffer.isView(bufferOrOptions)) {
-        buffer = bufferOrOptions?.buffer ?? Buffer.alloc(16384);
-        offset = bufferOrOptions?.offset ?? 0;
-        length = bufferOrOptions?.length ?? buffer.byteLength - offset;
-        position = bufferOrOptions?.position ?? null;
-      } else if (typeof offsetOrOptions === `object` && offsetOrOptions !== null) {
-        buffer = bufferOrOptions;
-        offset = offsetOrOptions?.offset ?? 0;
-        length = offsetOrOptions?.length ?? buffer.byteLength - offset;
-        position = offsetOrOptions?.position ?? null;
+      if (!Buffer.isBuffer(bufferOrOptions)) {
+        bufferOrOptions ??= {};
+        buffer = bufferOrOptions.buffer ?? Buffer.alloc(16384);
+        offset = bufferOrOptions.offset || 0;
+        length = bufferOrOptions.length ?? buffer.byteLength;
+        position = bufferOrOptions.position ?? null;
       } else {
         buffer = bufferOrOptions;
-        offset = offsetOrOptions ?? 0;
-        length ??= 0;
       }
+      offset ??= 0;
+      length ??= 0;
       if (length === 0) {
         return {
           bytesRead: length,
           buffer
         };
       }
-      const bytesRead = await this[kBaseFs].readPromise(
-        this.fd,
-        // FIXME: FakeFS should support ArrayBufferViews directly
-        Buffer.isBuffer(buffer) ? buffer : Buffer.from(buffer.buffer, buffer.byteOffset, buffer.byteLength),
-        offset,
-        length,
-        position
-      );
+      const bytesRead = await this[kBaseFs].readPromise(this.fd, buffer, offset, length, position);
       return {
         bytesRead,
         buffer
@@ -21311,8 +21328,7 @@ class ZipFS extends BasePortableFakeFS {
         const entries = Array.from(directoryListing, (name) => {
           return Object.assign(this.statImpl(`lstat`, ppath.join(p, name)), {
             name,
-            path: PortablePath.dot,
-            parentPath: PortablePath.dot
+            path: PortablePath.dot
           });
         });
         for (const entry of entries) {
@@ -21323,8 +21339,7 @@ class ZipFS extends BasePortableFakeFS {
           for (const child of subListing) {
             entries.push(Object.assign(this.statImpl(`lstat`, ppath.join(p, subPath, child)), {
               name: child,
-              path: subPath,
-              parentPath: subPath
+              path: subPath
             }));
           }
         }
@@ -21345,8 +21360,7 @@ class ZipFS extends BasePortableFakeFS {
       return Array.from(directoryListing, (name) => {
         return Object.assign(this.statImpl(`lstat`, ppath.join(p, name)), {
           name,
-          path: void 0,
-          parentPath: void 0
+          path: void 0
         });
       });
     } else {
@@ -21821,7 +21835,6 @@ function applyPatch(pnpapi, opts) {
       const optionNames = new Set(Object.keys(options));
       optionNames.delete(`paths`);
       optionNames.delete(`plugnplay`);
-      optionNames.delete(`conditions`);
       if (optionNames.size > 0) {
         throw makeError(
           ErrorCode.UNSUPPORTED,
@@ -21850,15 +21863,11 @@ function applyPatch(pnpapi, opts) {
       const issuerApi = apiPath !== null ? opts.manager.getApiEntry(apiPath, true).instance : null;
       try {
         if (issuerApi !== null) {
-          resolution = issuerApi.resolveRequest(request, path !== null ? `${path}/` : null, {
-            conditions: options?.conditions
-          });
+          resolution = issuerApi.resolveRequest(request, path !== null ? `${path}/` : null);
         } else {
           if (path === null)
             throw new Error(`Assertion failed: Expected the path to be set`);
-          resolution = originalModuleResolveFilename.call(require$$0.Module, request, module || makeFakeParent(path), isMain, {
-            conditions: options?.conditions
-          });
+          resolution = originalModuleResolveFilename.call(require$$0.Module, request, module || makeFakeParent(path), isMain);
         }
       } catch (error) {
         firstError = firstError || error;

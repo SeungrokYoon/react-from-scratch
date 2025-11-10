@@ -3,6 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -30,6 +31,17 @@ const config = {
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: '.',
+          globOptions: {
+            ignore: ['**/index.html'], // HtmlWebpackPlugin이 생성하므로 제외
+          },
+        },
+      ],
+    }),
   ],
   module: {
     rules: [
@@ -52,7 +64,11 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, require.resolve('css-loader'), require.resolve('postcss-loader')],
+        use: [
+          stylesHandler,
+          require.resolve('css-loader'),
+          require.resolve('postcss-loader'),
+        ],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
