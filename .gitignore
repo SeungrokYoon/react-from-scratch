@@ -4,6 +4,9 @@ node_modules
 # api keys
 apiKey.js
 
+# env files
+.env*
+
 # dist folder for built files
 dist
 
