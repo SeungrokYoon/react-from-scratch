@@ -38,7 +38,7 @@ const config = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: require.resolve('babel-loader'),
             options: {
               presets: [['@babel/preset-env', { targets: 'defaults' }]],
             },
@@ -47,12 +47,12 @@ const config = {
       },
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
+        use: require.resolve('ts-loader'),
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, 'css-loader', 'postcss-loader'],
+        use: [stylesHandler, require.resolve('css-loader'), require.resolve('postcss-loader')],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
