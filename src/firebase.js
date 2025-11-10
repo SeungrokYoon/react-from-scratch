@@ -1,8 +1,9 @@
 import { initializeApp } from 'firebase/app';
-import apiKey from '../apiKey';
+
+const { FIREBASE_API_KEY } = process.env;
 
 const firebaseConfig = {
-  apiKey: apiKey.firebase,
+  apiKey: FIREBASE_API_KEY,
   authDomain: 'modern-nats-ui.firebaseapp.com',
   projectId: 'modern-nats-ui',
   storageBucket: 'modern-nats-ui.appspot.com',
