@@ -1,6 +1,7 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -25,10 +26,19 @@ const config = {
     port: 3000,
   },
   plugins: [
+    // 환경 변수를 브라우저에서 사용 가능하도록 정의
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
     new HtmlWebpackPlugin({
       template: 'public/index.html',
+      filename: 'index.html',
     }),
-
+    // Cloudflare Pages SPA 지원을 위한 404.html 생성
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      filename: '404.html',
+    }),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     new CopyPlugin({
