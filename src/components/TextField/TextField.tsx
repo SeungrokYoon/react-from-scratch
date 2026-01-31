@@ -1,10 +1,4 @@
-import {
-  Dispatch,
-  MutableRefObject,
-  RefObject,
-  SetStateAction,
-  forwardRef,
-} from 'react';
+import { Dispatch, SetStateAction, forwardRef } from 'react';
 import { InputBaseComponent } from '@Component/Input/InputBaseComponent';
 
 interface TextFieldProps {
@@ -12,9 +6,9 @@ interface TextFieldProps {
   onChangeValue: Dispatch<SetStateAction<string>>;
 }
 
-const TextField = forwardRef(function Input(
-  props: TextFieldProps,
-  ref: MutableRefObject<any> | RefObject<any>
+const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function Input(
+  props,
+  ref
 ) {
   return (
     <InputBaseComponent
