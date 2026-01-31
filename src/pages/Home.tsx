@@ -21,11 +21,11 @@ export default function Home() {
     const testWorker = new Worker(
       new URL('../worker/worker.js', import.meta.url)
     );
-    testWorker.onmessage = (e) => {
+    testWorker.onmessage = (e: MessageEvent) => {
       setResult(e.data);
     };
 
-    function postMessageToWorker(e) {
+    function postMessageToWorker(e:KeyboardEvent) {
       if (e.key === 'Enter') {
         console.log('PostMessage to Worker');
         testWorker.postMessage([numState.aNum, numState.bNum]);
@@ -43,7 +43,7 @@ export default function Home() {
     const { name, value } = e.target;
     if (isNaN(Number(value))) {
       setNumState((prev) => {
-        const resetState = Object.keys(prev).reduce((acc, key) => {
+        const resetState = Object.keys(prev).reduce<{[key:string]:string}>((acc, key) => {
           acc[key] = '';
           return acc;
         }, {});
