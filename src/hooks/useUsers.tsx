@@ -9,7 +9,7 @@ interface User {
 export default function useUsers() {
   const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string|null>(null);
 
   useEffect(() => {
     fetchUsers();
