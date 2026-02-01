@@ -24,3 +24,5 @@ dist
 .yarn/install-state.gz
 .yarn/unplugged
 .yarn/build-state.yml
+*storybook.log
+storybook-static

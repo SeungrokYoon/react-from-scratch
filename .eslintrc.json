@@ -4,8 +4,16 @@
     "node": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "airbnb", "airbnb/hooks", "prettier"],
-  "plugins": ["@emotion"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "@emotion"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off", //^React17, this is not mandatory
     "import/no-extraneous-dependencies": [

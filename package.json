@@ -13,7 +13,9 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devServer": {
     "port": 8080
@@ -68,6 +70,13 @@
     "typescript": "^5.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "storybook": "^10.2.3",
+    "@storybook/react-webpack5": "^10.2.3",
+    "@storybook/addon-webpack5-compiler-swc": "^4.0.2",
+    "@storybook/addon-a11y": "^10.2.3",
+    "@storybook/addon-docs": "^10.2.3",
+    "@storybook/addon-onboarding": "^10.2.3",
+    "eslint-plugin-storybook": "^10.2.3"
   }
 }
