@@ -98,7 +98,7 @@ const config = {
   },
 };
 
-export default () => {
+const finalConfig = () => {
   if (isProduction) {
     config.mode = 'production';
     config.plugins.push(new MiniCssExtractPlugin() as any);
@@ -107,3 +107,6 @@ export default () => {
   }
   return config;
 };
+
+export default finalConfig();
+

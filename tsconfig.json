@@ -19,6 +19,11 @@
       "@Hook/*": ["./hooks/*"]
     }
   },
+  "ts-node": {
+    "compilerOptions": {
+    "module": "CommonJS"
+  }
+  },
   "include": ["src"],
   "exclude": ["node_modules"]
 }
