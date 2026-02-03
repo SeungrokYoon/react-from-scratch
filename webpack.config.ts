@@ -12,7 +12,7 @@ const stylesHandler = isProduction
   : 'style-loader';
 
 const config = {
-  mode: 'development',
+  mode: 'none',
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -22,7 +22,7 @@ const config = {
     open: true,
     historyApiFallback: true,
     host: '0.0.0.0', // Bind to all interfaces
-    port: 3000,
+    port: 5656,
   },
   plugins: [
     // 환경 변수를 브라우저에서 사용 가능하도록 정의
@@ -108,5 +108,4 @@ const finalConfig = () => {
   return config;
 };
 
-export default finalConfig();
-
+export default finalConfig;

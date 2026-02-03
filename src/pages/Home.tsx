@@ -25,7 +25,7 @@ export default function Home() {
       setResult(e.data);
     };
 
-    function postMessageToWorker(e:KeyboardEvent) {
+    function postMessageToWorker(e: KeyboardEvent) {
       if (e.key === 'Enter') {
         console.log('PostMessage to Worker');
         testWorker.postMessage([numState.aNum, numState.bNum]);
@@ -43,10 +43,13 @@ export default function Home() {
     const { name, value } = e.target;
     if (isNaN(Number(value))) {
       setNumState((prev) => {
-        const resetState = Object.keys(prev).reduce<{[key:string]:string}>((acc, key) => {
-          acc[key] = '';
-          return acc;
-        }, {});
+        const resetState = Object.keys(prev).reduce<{ [key: string]: string }>(
+          (acc, key) => {
+            acc[key] = '';
+            return acc;
+          },
+          {}
+        );
         return { ...prev, ...resetState, error: 'please enter number' };
       });
       return;
